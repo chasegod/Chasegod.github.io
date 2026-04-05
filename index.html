@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ebenezer — Chase God</title>
+<title>This Moment — Chase God</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -338,8 +338,8 @@
 
   <div class="header">
     <div class="brand">Chase God</div>
-    <div class="title">Ebenezer</div>
-    <div class="subtitle">Thus far the Lord has helped us</div>
+    <div class="title">This Moment</div>
+    <div class="subtitle">Don't let this fade</div>
     <div class="divider"></div>
   </div>
 
@@ -355,8 +355,8 @@
         <path d="M12 12l9-5M12 12v10M12 12L3 7"/>
       </svg>
     </div>
-    <div class="complete-title">Stone set.</div>
-    <div class="verse">"Thus far the Lord has helped us."<br>— 1 Samuel 7:12</div>
+    <div class="complete-title">Moment marked.</div>
+    <div class="verse">"Don't let this fade."<br>— 1 Samuel 7:12</div>
     <div class="summary" id="summaryBlock"></div>
     <div class="actions">
       <button class="action-btn primary-action" id="copyBtn">Copy to clipboard</button>
@@ -506,7 +506,7 @@ function showComplete() {
 }
 
 function buildCopyText() {
-  let t = `EBENEZER — ${getDate()}\n"Thus far the Lord has helped us." — 1 Samuel 7:12\nchasegod.org\n\n`;
+  let t = `THIS MOMENT — ${getDate()}\n"Don't let this fade." — 1 Samuel 7:12\nchasegod.org\n\n`;
   prompts.forEach(p => {
     const val = answers[p.key];
     if (!val) return;
@@ -533,7 +533,7 @@ document.getElementById('copyBtn').addEventListener('click', () => {
 
 document.getElementById('emailBtn').addEventListener('click', () => {
   const body = encodeURIComponent(buildCopyText());
-  const subject = encodeURIComponent('My Ebenezer — ' + getDate());
+  const subject = encodeURIComponent('This Moment — ' + getDate());
   window.location.href = `mailto:?subject=${subject}&body=${body}`;
 });
 
